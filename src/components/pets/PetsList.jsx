@@ -3,6 +3,7 @@ import PetsListNav from "./PetsListNav";
 import Pet from "./Pet";
 import "./PetsList.css";
 
+
 export const PetsList = ({ pets }) => {
   const [cats, dogs] = pets.reduce(
     (acc, pet) => {
@@ -17,6 +18,7 @@ export const PetsList = ({ pets }) => {
     <section className="pets-wrapper">
       <PetsListNav cats={cats} dogs={dogs} />
       <section className="pets-list">
+       
         {/* All cats section */}
         {cats.map((cat) => (
           <Pet key={cat.id} kind="cat" pet={cat} />
